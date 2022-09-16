@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="page">
+        <header>
+            <h1>Cadastro</h1>
+        </header>
+
+        <main>
+            <div id="tabs">
+                <div class="tab-links">
+                    <button type="submit" data-id="dados" data-open>Dados</button>
+                    <button type="submit" data-id="endereco" >Endereço</button>
+                    <button type="submit" data-id="finalizacao" >Finalização</button>
+                </div>
+
+            <div class="tab-content">
+                <section id="dados"> 
+                    <label for="nome"><b> Nome Completo</b></label>
+                    <input type="text" name="nome" id="nome" maxlength="30" required > <br>
+                    <label for="cpf"><b> Cpf</b></label>
+                    <input type="text"  id="cpf"  placeholder="Somente números" autocomplete="off"   maxlength="14" minlength="14" onkeyup="mascara_cpf()" required /> <br>
+                    <label for="data"><b> Data de Nascimento</b></label>
+                    <input type="date" name="data" id="data" required ><br>
+                </section>
+                
+
+                <section id="endereco">   
+
+                    <label for="cep"><b>CEP</b></label>
+                    <input type="text"   name="cep"  id="cep" value="" size="10" maxlength="9"  onblur="pesquisacep(this.value);" autocomplete="off"  required /> <br>
+                    <label for="rua"><b>Logradouro</b></label>
+                    <input name="rua" type="text" id="rua" size="40" autocomplete="off" required /> <br>
+                    <label for="bairro"><b>Bairro</b></label>
+                    <input name="bairro" type="text" id="bairro" autocomplete="off" size="40" required /> <br>
+                    <label for="number"><b>Número</b></label>
+                    <input type="number"  id="number" autocomplete="off"  name="number"   required/> <br>
+              
+                </section>
+
+                <section id="finalizacao">
+                   <h2>Obrigado por se cadastrar !</h2> <br>
+                   <div class="finalizacao">
+                    <b>Seus dados</b>
+                   </div>
+                </section>
+            </div>    
+            </div>
+        </main>
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
